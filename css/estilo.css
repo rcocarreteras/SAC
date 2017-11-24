@@ -1,0 +1,10 @@
+
+body {
+    font-family: Verdana;
+    font-size: 18px;
+    background:url(../images/bg1.jpg);
+	 background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+} 

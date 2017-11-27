@@ -113,73 +113,195 @@ $datos =  $filas;
     <!--CSS AJUSTE PANTALLA-->
 	<style>		
        
-	/*body, html {
+	body, html {
 		width: 100%;
 		height: 100%;
-		overflow: hidden;
+		/*overflow: hidden;*/
 		   
-	}*/
-	#contenedor {
+	}
+	.contenedor {
 		width: 100%;
 		height: 100%;
-		overflow: hidden;		
+		/*overflow: hidden;*/		
 		box-sizing: border-box;
 		padding: 0px;
-		margin: 0;		
+		margin: 0 auto;		
 		font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 		float: left;
 	}
-	#grid{		
-		float: left;
-		margin: 0;
+	
+	.encabezado{
+		width: 48%;
+		height: 5%;
+		alignment-adjust:central;
+		
+	}
+
+	.titulo{
 		padding: 5px;
-		width: 29%;	
-		height: 75%;			
+		border:#000000;
+		background: #d8d8d8;
 	}
-	#detalle{		
+	.titulo1 {
+		font-family: arial;
+		font-size: 10px;
+		padding: 10px;	
+		border: 3px solid #FF8C00;
+		border-bottom-width: 3px;
+		border-left-width: 0px;
+		border-right-width: 0px;
+		border-top-width: 0px;
+		width: 55%;
+		height: 50px;
 		float: left;
-		margin: 0;				
-		width: 56%;
-		height: 75%;
-		border: 2px dashed #49A2FF;
-	 	overflow-y: scroll;				
+		box-sizing: border-box;	
+	}
+	.titulo2 {
+		font-family: arial;
+		font-size: 10px;
+		text-align: center;		
+		padding: 10px;	
+		border: 3px solid #FF8C00;
+		border-bottom-width: 3px;
+		border-left-width: 0px;
+		border-right-width: 0px;
+		border-top-width: 0px;
+		width: 15%;
+		height: 50px;
+		float: left;
+		box-sizing: border-box;	
 	}
 
-	#filtro{
+	.titulo3 {
+		font-family: arial;
+		font-size: 10px;
+		text-align: right;
+		padding: 10px;	
+		border: 3px solid #FF8C00;
+		border-bottom-width: 3px;
+		border-left-width: 0px;
+		border-right-width: 0px;
+		border-top-width: 0px;
+		width: 15%;		
+		height: 50px;
 		float: left;
-		margin: 0;
-		padding: 10px;
-		width: 35%;
-		height: 8%;			
+		box-sizing: border-box;	
+	}
+	
+	#buscar {		
+		margin: 0 auto;
+		padding: 5px;
+		font-size: 1em;
+		width: 500px;
+		height: 50px;	
+	}
+
+	#main {
+		margin-left: 5px;
+		margin-right: 5px;		
+		padding: 5px;
+		width: 49%;
+		height: 100%;
+		float: left;			
+		box-sizing: border-box;		
+		/*overflow: hidden;*/			
 	}	
-	#botones{
+
+	#almacenSac{
+		margin-right: 2%;
 		float: left;
-		margin: 0;	
-		padding: 10px;			
-		width: 52%;
-		height: 8%;
+		padding-top: 5px;
+		width: 35%;
+		height: 70%;
+		border: 2px dashed #49A2FF;
+		border-radius: 10px;
+		box-sizing: border-box;
+		overflow-y: scroll;
+		/*overflow-x: hidden;*/
 	}
 
-	//CLASES 
-	.boton{
+	#art{
+		padding: 5px;
+		background: #d8d8d8;
+		width: 15%;
+		float: left;			
+	}
+
+	#descripcion{
+		padding: 5px;
+		background: #d8d8d8;				
+		width: 55%;
 		float: left;		
 	}
-	
-
-/*@media screen and (min-width: 800px) and (max-width: 1024px) {*/
-	@media screen and (min-width: 800px) and (max-width: 1366px) {
-		body{
-			/*background: black;*/
-		}
-		span{			
-			font-size: 80%;
-			font-weight:bold; 
-		}				
-		.jqx-widget { 			
-			font-weight:bold;
-		}
+	#cantidad{
+		padding: 5px;
+		background: #d8d8d8;				
+		width: 15%;
+		float: left;
+		text-align: center;
 	}
-	
+	#importe{
+		padding: 5px;
+		background: #d8d8d8;				
+		width: 15%;
+		float: left;
+		text-align: center;
+	}			
+	.total {				
+		border-radius: 10px;
+		margin-top: 10px;
+		margin-left: 5px;
+		margin-right: 15px;
+		position: relative;				
+		background: black;
+		font-family: arial;
+		font-size: 23px;
+		font-weight: bold;
+		color: white;
+		padding-top: 30px;
+		padding-left: 15px;
+		padding-right: 15px;				
+		width: 35%;
+		height: 10%;
+		float: left;					
+		/*overflow: hidden;*/
+		box-sizing: border-box;
+		cursor:pointer;
+	}		
+	.total1 {				
+		border-radius: 10px;
+		margin-top: 5px;
+		margin-left: 5px;
+		margin-right: 15px;
+		position: relative;				
+		background: black;
+		font-family: arial;
+		font-size: 23px;
+		font-weight: bold;
+		color: white;
+		padding-top: 15px;
+		padding-left: 15px;
+		padding-right: 15px;				
+		width: 35%;
+		height: 5%;
+		float: left;					
+		/*overflow: hidden;*/
+		box-sizing: border-box;
+		cursor:not-allowed;
+	}
+	.money2 {
+		position: relative;
+		float: right;		
+		text-align: right;
+		font-family: arial;
+		font-size: 23px;
+		font-weight: bold;		
+	}
+	input.inputstyle{
+		font-family: Arial; 
+		font-size: 3pt; 
+		background-color: #00FF00;
+	}
 </style>
 <script type="text/javascript">
 $(document).ready(function () {
@@ -277,8 +399,8 @@ $(document).ready(function () {
             // create Tree Grid            
             $("#treeGrid").jqxTreeGrid(
             {
-                width: '100%',
-				height: '100%',
+                width: '45%',
+				height: '80%',
                 source: dataAdapter,
                 filterable: true,
                 filterMode: 'simple',
@@ -360,7 +482,6 @@ function Prueba(){
 </head>
 <body>
 
-<div id=="contenedor">
 
 	<header>
 		<a href="index.php"><img class="derecha" src="images/cerrarsesion.png"></a>
@@ -380,6 +501,7 @@ function Prueba(){
 		<a href="ProrrateoMaq.php"><span>Carga Costos Maq</span></a>
 		<a href="ProrrateoMaquinaria.php"><span>Prorrateo Maq</span></a> 
 	</header>
+<div id=="contenedor">
 
 	<div class="menulateral">
         <div class="submenu_lateral_encabezado">
@@ -409,12 +531,12 @@ function Prueba(){
 	</div>
     
 	<div id="detalle">
-        <table width='749' style='font-family:comic sans'>
+        <table width='701' style='font-family:comic sans'>
             <tr bgcolor='#CBCBCB'>
                 <td width="120"><strong>No. Econ&oacute;mico</strong></td>
-                <td width='276' align='center' height='20'><strong>Descripcion</strong></td>
+                <td width='278' align='center' height='20'><strong>Descripcion</strong></td>
                 <td width='164' align='center'><strong>Hora Salida</strong></td>
-                <td width='164' align='center'><strong>Hora Entrada</strong></td>
+                <td width='119' align='center'><strong>Hora Entrada</strong></td>
             </tr>
         </table>
 	</div>

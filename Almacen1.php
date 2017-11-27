@@ -390,13 +390,13 @@ if ($x > 0){
 	body, html {
 		width: 100%;
 		height: 100%;
-		overflow: hidden;
+		/*overflow: hidden;*/
 		   
 	}
 	.contenedor {
 		width: 100%;
 		height: 100%;
-		overflow: hidden;		
+		/*overflow: hidden;*/		
 		box-sizing: border-box;
 		padding: 0px;
 		margin: 0 auto;		
@@ -478,7 +478,7 @@ if ($x > 0){
 		height: 100%;
 		float: left;			
 		box-sizing: border-box;		
-		overflow: hidden;			
+		/*overflow: hidden;*/			
 	}	
 
 	#almacenSac{
@@ -491,7 +491,7 @@ if ($x > 0){
 		border-radius: 10px;
 		box-sizing: border-box;
 		overflow-y: scroll;
-		overflow-x: hidden;
+		/*overflow-x: hidden;*/
 	}
 
 	#art{
@@ -538,7 +538,7 @@ if ($x > 0){
 		width: 35%;
 		height: 10%;
 		float: left;					
-		overflow: hidden;
+		/*overflow: hidden;*/
 		box-sizing: border-box;
 		cursor:pointer;
 	}		
@@ -559,7 +559,7 @@ if ($x > 0){
 		width: 35%;
 		height: 5%;
 		float: left;					
-		overflow: hidden;
+		/*overflow: hidden;*/
 		box-sizing: border-box;
 		cursor:not-allowed;
 	}
@@ -919,26 +919,26 @@ var formatNumber = {
 </head>
 <body>
 
-<div class="contenedor">
 
 	<header>
 		<a href="index.php"><img class="derecha" src="images/cerrarsesion.png"></a>
 		<a href="Almacen.php"><span>Insumos</span></a>
-		<a href="Salidas.php"><span>Salida Insumos</span></a>
-		<a href="AlmacenMaq.php"><span>Maquinaria</span></a>
+		<a href="Salidas.php"><span>Salida Ins</span></a>
+		<a href="AlmacenMaq.php"><span>Maq</span></a>
 		<a href="SalidasMaq.php"><span>Entrada Maq</span></a>
-		<a href="AvanceDiarioPlus.php"><span>Avance Diario</span></a>
+		<a href="AvanceDiarioPlus.php"><span>Avance</span></a>
             <?php 
 			if($_SESSION['S_Privilegios'] == 'ADMINISTRADOR' || $_SESSION['S_Privilegios'] == 'COORDINADOR'){
 			 ?>
 		<a href="Contratos.php"><span>Contratos</span></a>
 		<a href="Comparativo.php"><span>Comparativa</span></a>
 			<?php } ?>  
-		<a href="Prorrateo.php"><span>Carga Costos MO</span></a>
+		<a href="Prorrateo.php"><span>Costos MO</span></a>
 		<a href="ProrrateoAct.php"><span>Prorrateo MO</span></a>
-		<a href="ProrrateoMaq.php"><span>Carga Costos Maq</span></a>
+		<a href="ProrrateoMaq.php"><span>Costos Maq</span></a>
 		<a href="ProrrateoMaquinaria.php"><span>Prorrateo Maq</span></a> 
 	</header>
+<div class="contenedor">
 
 	<div class="menulateral">
         <div class="submenu_lateral_encabezado">

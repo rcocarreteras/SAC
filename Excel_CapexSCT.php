@@ -66,9 +66,6 @@ $objPHPExcel->setActiveSheetIndex(2)
 	->setCellValue('G7', utf8_encode($anio))
 	->setCellValue('H10', utf8_encode("FECHA DE ELABORACION: ".date("d/F/Y")))
 	->setCellValue('H9', utf8_encode("Informe mensual de : ".date("d/F/Y")));
-//$objPHPExcel->setActiveSheetIndex(3)
-//	->setCellValue('B6', utf8_encode($tramo))
-//	->setCellValue('B7', utf8_encode($tramo));
 $objPHPExcel->setActiveSheetIndex(4)
 	->setCellValue('G7', utf8_encode($anio))
 	->setCellValue('I10', utf8_encode("FECHA DE ELABORACION: ".date("d/F/Y")))
@@ -76,27 +73,17 @@ $objPHPExcel->setActiveSheetIndex(4)
 
 
 //HOJA 3 (EJECUTADO)
-$objPHPExcel->setActiveSheetIndex(3);
-for ($i=14; $i <= 82; $i++) {
-	$letra = 72;
-	$letra2 = "65";
+$objPHPExcel->setActiveSheetIndex(0);
+for ($i=14; $i <= 80; $i++) {
+//	$letra = 72;
+//	$letra2 = "65";
 	
 	$valida = $objPHPExcel->getActiveSheet()->getCell('B'.$i)->getValue();
 	if (trim($valida) == "") {
 		continue;	
 	}
-	
-	for ($j=1; $j <= 12 ; $j++) {
-		$precio = 0;
-		$cantidad = 0;
-		$total = 0;
 		
-		
-		if($j < 10){
-			$j = "0".$j;
-		}
-		
-		$sql2 = "SELECT ISNULL(SUM(AvanceDiario.CANTIDAD), 0) CANTIDAD, PrecioSCT.UNIDAD, PrecioSCT.PRECIO_UNITARIO FROM AvanceDiario INNER JOIN PrecioSCT ON AvanceDiario.ACTIVIDAD = PrecioSCT. CONCEPTO WHERE PrecioSCT.CLAVE_SCT = '".trim($clave)."' AND YEAR(FECHA) = '".$year."' AND MONTH(FECHA) = '".$j."' AND TRAMO='".$tramo."' GROUP BY PrecioSCT.UNIDAD, PrecioSCT.PRECIO_UNITARIO";
+		$sql2 = "SELECT * FROM PresupuestoCapexSCT WHERE TRAMO = '".$tramo."' AND ANIO = '".$anio."'";
 		$rs2 = odbc_exec( $conn2, $sql2);
 		if ( !$rs2 ) { 
 			exit( "Error en la consulta SQL" );
@@ -104,15 +91,16 @@ for ($i=14; $i <= 82; $i++) {
 		while ( odbc_fetch_row($rs2) ) {  
 			$cantidad = odbc_result($rs2, 'CANTIDAD');	
 			$precio = odbc_result($rs2, 'PRECIO_UNITARIO');	
-			$total = $cantidad * $precio;						
-		}
+			$total = $cantidad * $precio;
 
-		if ($letra <= 89) {
-			$objPHPExcel->setActiveSheetIndex(3)
-				->setCellValue(chr($letra).$i, $cantidad)
-				->setCellValue(chr($letra + 1).$i, $total);
+			$objPHPExcel->setActiveSheetIndex(0)
+				->setCellValue("G".$i, $cantidad)
+				->setCellValue("I".$i, $precio)
+				->setCellValue("J".$i, $total);
+			$objPHPExcel->setActiveSheetIndex(1)
+				->setCellValue("G".$i, $cantidad)
+				->setCellValue("I".$i, $precio);
 		}
-	}
 }
 
 

@@ -124,13 +124,13 @@ $datos =  $filas;
 	body, html {
 		width: 100%;
 		height: 100%;
-		overflow: hidden;
+		/*overflow: hidden;*/
 		   
 	}
 	.contenedor {
 		width: 100%;
 		height: 100%;
-		overflow: hidden;		
+		/*overflow: hidden;*/		
 		box-sizing: border-box;
 		padding: 0px;
 		margin: 0 auto;		
@@ -159,7 +159,7 @@ $datos =  $filas;
 		border-left-width: 0px;
 		border-right-width: 0px;
 		border-top-width: 0px;
-		width: 85%;
+		width: 55%;
 		height: 50px;
 		float: left;
 		box-sizing: border-box;	
@@ -212,7 +212,7 @@ $datos =  $filas;
 		height: 100%;
 		float: left;			
 		box-sizing: border-box;		
-		overflow: hidden;			
+		/*overflow: hidden;*/			
 	}	
 
 	#almacenSac{
@@ -225,12 +225,12 @@ $datos =  $filas;
 		border-radius: 10px;
 		box-sizing: border-box;
 		overflow-y: scroll;
-		overflow-x: hidden;
+		/*overflow-x: hidden;*/
 	}
 
 	#art{
 		padding: 5px;
-		background: #d8d8d8;				
+		background: #d8d8d8;
 		width: 15%;
 		float: left;			
 	}
@@ -239,13 +239,6 @@ $datos =  $filas;
 		padding: 5px;
 		background: #d8d8d8;				
 		width: 55%;
-		float: left;		
-	}
-	
-	#descripcion1{
-		padding: 5px;
-		background: #d8d8d8;				
-		width: 85%;
 		float: left;		
 	}
 	#cantidad{
@@ -279,16 +272,16 @@ $datos =  $filas;
 		width: 35%;
 		height: 10%;
 		float: left;					
-		overflow: hidden;
+		/*overflow: hidden;*/
 		box-sizing: border-box;
 		cursor:pointer;
-	}
-	.total1 {
+	}		
+	.total1 {				
 		border-radius: 10px;
 		margin-top: 5px;
 		margin-left: 5px;
 		margin-right: 15px;
-		position: relative;
+		position: relative;				
 		background: black;
 		font-family: arial;
 		font-size: 23px;
@@ -300,10 +293,10 @@ $datos =  $filas;
 		width: 35%;
 		height: 5%;
 		float: left;					
-		overflow: hidden;
+		/*overflow: hidden;*/
 		box-sizing: border-box;
 		cursor:not-allowed;
-	}		
+	}
 	.money2 {
 		position: relative;
 		float: right;		
@@ -482,7 +475,6 @@ $(window).load(function() {
 </head>
 <body>
 
-<div class="contenedor">
 <header>
 		<a href="index.php"><img class="derecha" src="images/cerrarsesion.png"></a>
 		<a href="Almacen.php"><span>Insumos</span></a>
@@ -502,6 +494,7 @@ $(window).load(function() {
 		<a href="ProrrateoMaquinaria.php"><span>Prorrateo Maq</span></a> 
 	</header>
 
+<div class="contenedor">
 	<div class="menulateral">
         <div class="submenu_lateral_encabezado">
         	<span class="glyphicon glyphicon-wrench"></span> &rlm; HERRAMIENTAS

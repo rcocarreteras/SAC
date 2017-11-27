@@ -31,10 +31,10 @@
 		header img{			
 			float: left;
 		}
-		header span{			
+		header span{
 			float: left;
-			padding-top: 20px;
-			width: 140px;
+			padding-top: 10px;
+			width: 90px;
 			height: 65px;
 			background: #2c2c2c;
 			border-bottom: 3px solid #0057B3;

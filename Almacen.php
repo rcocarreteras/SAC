@@ -321,13 +321,13 @@ if ($x > 0){
 	body, html {
 		width: 100%;
 		height: 100%;
-		overflow: hidden;
+		/*overflow: hidden;*/
 		   
 	}
 	.contenedor {
 		width: 100%;
 		height: 100%;
-		overflow: hidden;		
+		/*overflow: hidden;*/		
 		box-sizing: border-box;
 		padding: 0px;
 		margin: 0 auto;		
@@ -409,7 +409,7 @@ if ($x > 0){
 		height: 100%;
 		float: left;			
 		box-sizing: border-box;		
-		overflow: hidden;			
+		/*overflow: hidden;*/			
 	}	
 
 	#almacenSac{
@@ -422,7 +422,7 @@ if ($x > 0){
 		border-radius: 10px;
 		box-sizing: border-box;
 		overflow-y: scroll;
-		overflow-x: hidden;
+		/*overflow-x: hidden;*/
 	}
 
 	#art{
@@ -469,7 +469,7 @@ if ($x > 0){
 		width: 35%;
 		height: 10%;
 		float: left;					
-		overflow: hidden;
+		/*overflow: hidden;*/
 		box-sizing: border-box;
 		cursor:pointer;
 	}		
@@ -490,7 +490,7 @@ if ($x > 0){
 		width: 35%;
 		height: 5%;
 		float: left;					
-		overflow: hidden;
+		/*overflow: hidden;*/
 		box-sizing: border-box;
 		cursor:not-allowed;
 	}
@@ -515,80 +515,6 @@ $(document).ready(function () {
             var arrayconcep=[];
             var precio=[];
 			var cant=[];
-
-            //EFECTOS EN EL MENU
-            $("#menu1").mouseenter(function(e){
-				$("#menu1").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu1").mouseleave(function(e){
-				$("#menu1").css({"background": "#2c2c2c"});			  
-			});
-            $("#menu2").mouseenter(function(e){
-				$("#menu2").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu2").mouseleave(function(e){
-				$("#menu2").css({"background": "#49A2FF"});			  
-			});
-			$("#menu3").mouseenter(function(e){
-				$("#menu3").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu3").mouseleave(function(e){
-				$("#menu3").css({"background": "#2c2c2c"});			  
-			});			
-			$("#menu4").mouseenter(function(e){
-				$("#menu4").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu4").mouseleave(function(e){
-				$("#menu4").css({"background": "#2c2c2c"});			  
-			});	
-			$("#menu5").mouseenter(function(e){
-				$("#menu5").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu5").mouseleave(function(e){
-				$("#menu5").css({"background": "#2c2c2c"});			  
-			});	
-			$("#menu6").mouseenter(function(e){
-				$("#menu6").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu6").mouseleave(function(e){
-				$("#menu6").css({"background": "#2c2c2c"});			  
-			});	
-			$("#menu7").mouseenter(function(e){
-				$("#menu7").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu7").mouseleave(function(e){
-				$("#menu7").css({"background": "#2c2c2c"});			  
-			});	
-			$("#menu8").mouseenter(function(e){
-				$("#menu8").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu8").mouseleave(function(e){
-				$("#menu8").css({"background": "#2c2c2c"});			  
-			});	
-			$("#menu9").mouseenter(function(e){
-				$("#menu9").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu9").mouseleave(function(e){
-				$("#menu9").css({"background": "#2c2c2c"});			  
-			});	
-			$("#menu10").mouseenter(function(e){
-				$("#menu10").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu10").mouseleave(function(e){
-				$("#menu10").css({"background": "#2c2c2c"});			  
-			});	
-            $("#menu11").mouseenter(function(e){
-				$("#menu11").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu11").mouseleave(function(e){
-				$("#menu11").css({"background": "#2c2c2c"});			  
-			});
-            $("#menu12").mouseenter(function(e){
-				$("#menu12").css({"background": "#49A2FF", "border":"0px"});			  
-			});
-			$("#menu12").mouseleave(function(e){
-				$("#menu12").css({"background": "#2c2c2c"});			  
-			});
 			
 			//EFECTOS EN EL MENU LATERAL
             $("#sub1").mouseenter(function(e){
@@ -670,16 +596,16 @@ $(document).ready(function () {
                 
                 keyboardnavigation: false,
                 columns: [
-				  { text: 'Articulo', dataField: 'Articulo', width: '15%' },
+				  { text: 'Articulo', dataField: 'Articulo', width: '16%' },
 				  { text: 'Descripcion', dataField: 'Descrip', width: '48%' },
 				  { text: 'Unidad', dataField: 'Unidad', cellsAlign: 'center', width: '10%' },
 				  { text: 'P / Unitario', dataField: 'Precio_Unitario', cellsformat: 'c2', cellsAlign: 'right', width: '15%' },
 				  { text: 'Existencia', dataField: 'Exist', cellsformat: 'f2', cellsAlign: 'right', width: '12%' },
                 ]
             });
-			
+
 			//GRID ALMACEN SAC
-			var data =  <?php echo json_encode($datos3); ?>;				    
+			var data =  <?php echo json_encode($datos3); ?>;
 		    var source =
             {
                 datafields: [
@@ -921,26 +847,26 @@ var formatNumber = {
 </head>
 <body>
 
-<div class="contenedor">
 
 	<header>
 		<a href="index.php"><img class="derecha" src="images/cerrarsesion.png"></a>
 		<a href="Almacen.php"><span>Insumos</span></a>
-		<a href="Salidas.php"><span>Salida Insumos</span></a>
-		<a href="AlmacenMaq.php"><span>Maquinaria</span></a>
+		<a href="Salidas.php"><span>Salida Ins</span></a>
+		<a href="AlmacenMaq.php"><span>Maq</span></a>
 		<a href="SalidasMaq.php"><span>Entrada Maq</span></a>
-		<a href="AvanceDiarioPlus.php"><span>Avance Diario</span></a>
+		<a href="AvanceDiarioPlus.php"><span>Avance</span></a>
             <?php 
 			if($_SESSION['S_Privilegios'] == 'ADMINISTRADOR' || $_SESSION['S_Privilegios'] == 'COORDINADOR'){
 			 ?>
 		<a href="Contratos.php"><span>Contratos</span></a>
 		<a href="Comparativo.php"><span>Comparativa</span></a>
 			<?php } ?>  
-		<a href="Prorrateo.php"><span>Carga Costos MO</span></a>
+		<a href="Prorrateo.php"><span>Costos MO</span></a>
 		<a href="ProrrateoAct.php"><span>Prorrateo MO</span></a>
-		<a href="ProrrateoMaq.php"><span>Carga Costos Maq</span></a>
+		<a href="ProrrateoMaq.php"><span>Costos Maq</span></a>
 		<a href="ProrrateoMaquinaria.php"><span>Prorrateo Maq</span></a> 
 	</header>
+<div class="contenedor">
 
 	<div class="menulateral">
         <div class="submenu_lateral_encabezado">
